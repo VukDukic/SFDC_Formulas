@@ -1,0 +1,3 @@
+IF ( ISBLANK(Close_Date__c) ,
+      TODAY() - Open_Date__c ,
+      Close_Date__c - Open_Date__c )
