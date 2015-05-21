@@ -1,0 +1,6 @@
+// This formula checks the content of a custom text field named Product_Type and returns “Parts” for 
+// any product with the word “part” in it. Otherwise, it returns “Service.” 
+// Note that the values are case sensitive, so if a Product_Type field contains the text “Part” or “PART,” 
+// this formula returns “Services.”
+
+IF(CONTAINS(Product_Type__c, "part"), "Parts", "Service")
