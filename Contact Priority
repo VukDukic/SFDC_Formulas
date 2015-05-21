@@ -1,0 +1,14 @@
+// This formula assesses the importance of a contact based on the account rating and the contact's title. 
+// If the account rating is Hot or the title starts with Executive, then the priority is high (P1). 
+// If the account rating is Warm or the title starts with VP then the priority is medium (P2), 
+// and if the account rating is Cold then the priority is low (P3).
+
+IF(OR(ISPICKVAL(Account.Rating, "Hot"), CONTAINS(Title, "Executive")), "P1", 
+
+IF(OR(ISPICKVAL(Account.Rating, "Warm"), CONTAINS(Title, "VP")), "P2", 
+
+IF(ISPICKVAL(Account.Rating, "Cold"), "P3", 
+
+"P3")
+)
+)
