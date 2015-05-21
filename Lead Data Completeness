@@ -1,0 +1,7 @@
+// This formula calculates the percent of certain lead fields that your sales personnel enter. 
+// The formula field checks the values of two custom number fields: Phone and Email. 
+// If the fields are empty, the formula returns the value “0.” 
+// The formula returns a value of “1” for each field that contains 
+// a value and multiplies this total by fifty to give you the percentage of fields that contain data.
+
+(IF(Phone = "", 0, 1) + IF(Email = "", 0, 1) ) * 50
