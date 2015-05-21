@@ -1,0 +1,8 @@
+// This formula creates a linkable phone number field that automatically dials the phone number when clicked. 
+// In this example, replace "servername" and "call" with the name of your dialing tool and the command it uses to dial. 
+// The merge field, Id, inserts the identifier for the contact, lead, or account record. 
+// The first Phone merge field tells the dialing tool what number to call and the last Phone merge field uses the value of 
+// the Phone field as the linkable text the user clicks to dial.
+
+HYPERLINK("http://servername/call?id=" & Id & "&phone=" &
+                      Phone, Phone)
