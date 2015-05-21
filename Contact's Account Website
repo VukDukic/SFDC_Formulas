@@ -1,0 +1,14 @@
+// This formula displays the standard Account Website field on the contacts page.
+
+Account.Website
+
+// If the account website URL is long, 
+// use the HYPERLINK function to display a label such as “Click Here” instead of the URL. For example:
+
+IF(Account.Website="", "",
+	IF(
+		OR(LEFT(Account.Website, 7) = "http://",LEFT(Account.Website, 8) = "https://"), 
+		HYPERLINK( Account.Website , "Click Here" ), 
+		HYPERLINK( "http://" & Account.Website , "Click Here" )
+	)
+)
