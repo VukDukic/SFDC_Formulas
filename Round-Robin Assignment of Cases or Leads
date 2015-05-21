@@ -3,3 +3,12 @@
 // You can also assign cases using a similar formula.
 
 MOD(VALUE(Lead_Number__c), 3)
+
+// This formula is for a custom formula field named Round_Robin_ID that assigns each lead a value of 0, 1, or 2. 
+// This formula uses a custom auto-number field called Lead Number that assigns each lead a unique number starting with 1. 
+// The MOD function divides the lead number by the number of lead queues available (three in this example) 
+// and returns a remainder of 0, 1, or 2. 
+// Use the value of this formula field in your lead assignment rules to assign lead records to different queues. For example:
+// Round_Robin_ID = 0 is assigned to Queue A
+// Round_Robin_ID = 1 is assigned to Queue B
+// Round_Robin_ID = 2 is assigned to Queue C
