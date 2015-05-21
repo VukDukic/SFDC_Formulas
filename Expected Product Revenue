@@ -1,0 +1,3 @@
+// This formula calculates total revenue from multiple products, each with a different probability of closing.
+
+ProductA_probability__c * ProductA_revenue__c + ProductB_probability__c * ProductB_revenue__c
