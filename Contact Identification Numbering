@@ -1,0 +1,5 @@
+// This formula displays the first five characters ofta name and the last four characters of a social security number 
+// separated by a dash. Note that this example uses a text custom field called SSN.
+
+TRIM(LEFT(LastName, 5)) &
+                    "-" & TRIM(RIGHT(SSN__c, 4))
