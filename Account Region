@@ -1,0 +1,9 @@
+// This formula returns a text value of “North,” “South,” “East,” “West,” 
+// or “Central” based on the Billing State/Province of the account.
+
+IF(ISBLANK(BillingState), "None",
+IF(CONTAINS("AK:AZ:CA:HA:NV:NM:OR:UT:WA", BillingState), "West",
+IF(CONTAINS("CO:ID:MT:KS:OK:TX:WY", BillingState), "Central",
+IF(CONTAINS("CT:ME:MA:NH:NY:PA:RI:VT", BillingState), "East",
+IF(CONTAINS("AL:AR:DC:DE:FL:GA:KY:LA:MD:MS:NC:NJ:SC:TN:VA:WV", BillingState), "South",
+IF(CONTAINS("IL:IN:IA:MI:MN:MO:NE:ND:OH:SD:WI", BillingState), "North", "Other"))))))
