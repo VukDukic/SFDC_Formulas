@@ -1,0 +1,3 @@
+
+// Use this formula to display the Account Rating field on the contacts page
+CASE(Account.Rating, "Hot", "Hot", "Warm", "Warm", "Cold", "Cold", "Not Rated")
