@@ -1,0 +1,11 @@
+// This formula takes a group of fields and calculates what percent of them are being used by your personnel. 
+// This formula field checks five fields to see if they are blank. If so, a zero is counted for that field. 
+// A “1” is counted for any field that contains a value and this total is divided by five (the number of fields evaluated). 
+// Note that this formula requires you select the Treat blank fields as blanks option under 
+// Blank Field Handling while the Advanced Formula subtab is showing.
+
+(IF(ISBLANK(Maint_Amount__c), 0, 1) + ​
+ IF(ISBLANK(Services_Amount__c), 0,1) + ​
+  IF(ISBLANK(Discount_Percent__c), 0, 1) + ​
+   IF(ISBLANK(Amount), 0, 1) +​
+    IF(ISBLANK(Timeline__c), 0, 1)) / 5
