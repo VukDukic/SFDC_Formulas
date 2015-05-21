@@ -1,0 +1,5 @@
+// This formula uses conditional logic to populate an Opportunity category text field, 
+// based on the value of the Amount standard field. Opportunities with amounts less than $1500 are “Category 1,” 
+// those between $1500 and $10000 are “Category 2,” and the rest are “Category 3.” This example uses nested IF statements.
+
+IF(Amount < 1500, "Category 1", IF(Amount > 10000, "Category 3", "Category 2"))
