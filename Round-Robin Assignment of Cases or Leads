@@ -1,0 +1,5 @@
+// The following formula example for leads assumes you have three lead queues and you want to assign an equal number 
+// of incoming leads to each queue. 
+// You can also assign cases using a similar formula.
+
+MOD(VALUE(Lead_Number__c), 3)
