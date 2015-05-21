@@ -1,0 +1,9 @@
+// You can configure a link that appears on your contacts' profile page that sends you to their LinkedIn profile. To do so:
+// From Setup, click Customize | Contacts | Buttons, Links and Actions.
+// Click New Button or Link.
+// Enter a Label for this link, like LinkedInLink.
+// Enter this formula in the content box:
+
+http://www.linkedin.com/search/fpsearch?type=people&keywords
+={!Contact.FirstName}+{!Contact.LastName} 
+
