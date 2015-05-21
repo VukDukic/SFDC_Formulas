@@ -1,0 +1,5 @@
+// This formula returns a number value for the text value in the auto-number field Lead Number. 
+// This can be useful if you want to use the Lead Number field in a calculation, such as round-robin or other routing purposes. 
+// Note that auto-number fields are text fields and must be converted to a number for numeric calculations.
+
+VALUE(Lead_Number__c)
