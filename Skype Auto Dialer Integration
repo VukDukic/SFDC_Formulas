@@ -1,0 +1,5 @@
+// This formula creates a linkable phone number field that automatically dials the phone number via the 
+// Skype VOIP phone application. 
+// It requires installation of the Skype application (a third-party product not provided by Salesforce) on your desktop.
+
+HYPERLINK("callto://+" & Country_Code__c & Phone_Unformatted__c, Phone)
