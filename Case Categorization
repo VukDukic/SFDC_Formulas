@@ -1,0 +1,5 @@
+// This formula displays a text value of “RED,” “YELLOW,” or “GREEN,” depending on the value of a case age custom text field.
+
+IF(DaysOpen__c > 20, "RED",
+IF(DaysOpen__c > 10, "YELLOW", 
+"GREEN") )
