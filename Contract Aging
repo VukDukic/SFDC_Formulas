@@ -1,0 +1,6 @@
+// This formula calculates the number of days since a contract with an account was activated. 
+// If the contract Status is not “Activated,” this field is blank.
+
+IF(ISPICKVAL(Contract_Status__c, "Activated"), 
+NOW() - Contract_Activated_Date__c, null)
+
