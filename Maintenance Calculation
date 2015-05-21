@@ -1,0 +1,4 @@
+// This formula calculates maintenance fees as 20% of license fees per year. 
+// Maintenance Years is a custom field on opportunities.
+
+Amount * Maint_Years__c * 0.2
