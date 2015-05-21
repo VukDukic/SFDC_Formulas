@@ -1,0 +1,5 @@
+// This formula displays “Small” if the price and quantity are less than one. 
+// This field is blank if the asset has a price or quantity greater than one.
+
+IF(AND(Price<1,Quantity<1),"Small", null)
+
