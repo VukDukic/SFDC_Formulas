@@ -1,0 +1,12 @@
+// This formula evaluates Annual Revenue, Billing Country, and Type, and assigns a value of “Hot,” “Warm,” or “Cold.”
+
+IF (AND (AnnualRevenue > 10000000, 
+CONTAINS (CASE (BillingCountry, "United States", "US", "America", "US", "USA", "US", "NA"), "US")), 
+IF(ISPICKVAL(Type, "Manufacturing Partner"), "Hot", 
+IF(OR (ISPICKVAL (Type, "Channel Partner/Reseller"), 
+ISPICKVAL(Type, "Installation Partner")), "Warm", "Cold")), 
+"Cold")
+
+In addition, you can reference this Account Rating formula field from the contact object using cross-object formulas.
+
+Account.Account_Rating__c
