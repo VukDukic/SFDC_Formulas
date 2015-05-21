@@ -1,0 +1,8 @@
+// This formula checks to see if a lead is open and if so, 
+// calculates the number of days it has been open by subtracting the date and time created from the current date and time. 
+// The result is the number of days open rounded to zero decimal places. If the lead is not open, this field is blank.
+
+
+IF ( ISPICKVAL(Status, 
+                      "Open"), ROUND(NOW() - CreatedDate, 0), null)
+                      
