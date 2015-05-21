@@ -1,0 +1,9 @@
+// This formula displays the contact’s preferred contact method in a contact related list—work phone, 
+// home phone, or mobile phone—based on a selected option in a Preferred Phone custom picklist.
+
+CASE(Preferred_Phone__c, 
+"Work", "w. " & Phone, 
+"Home", "h. " & HomePhone, 
+"Mobile", "m. " & MobilePhone, 
+"No Preferred Phone")
+
