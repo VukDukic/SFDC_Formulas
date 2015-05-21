@@ -1,0 +1,6 @@
+// This formula displays “Large Deal” for deals over one million dollars or “Small Deal” for deals under one million dollars.
+
+IF(Sales_Price__c > 1000000, 
+"Large Deal", 
+"Small Deal")
+
