@@ -1,0 +1,7 @@
+// This formula determines if the payment due date is past and the payment status is “UNPAID.”
+// If so, returns the text “PAYMENT OVERDUE” and if not, leaves the field blank. 
+// This example uses a custom date field called Payment Due Date and a text custom field called 
+// Payment Status.
+
+IF(AND(Payment_Due_Date__c < TODAY(), Payment_Status__c = "UNPAID"),
+"PAYMENT OVERDUE", null)
