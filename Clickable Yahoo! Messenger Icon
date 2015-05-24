@@ -1,0 +1,9 @@
+// This formula displays a clickable Yahoo! Messenger icon indicating if the person is 
+// logged on to the service. Users can click the icon to launch a Yahoo! Messenger 
+// conversation with the person. This example uses a custom text field called Yahoo Name on 
+// contacts where you can store the contact's Yahoo! Messenger ID.
+
+HYPERLINK("ymsgr:sendIM?" & Yahoo_Name__c,
+IMAGE("http://opi.yahoo.com/online?u=" & Yahoo_Name__c &
+"&m;=g&t;=0", "Yahoo"))
+
