@@ -1,0 +1,13 @@
+// Use this default value formula to set the tax rate of an asset based on the user's city. 
+// Create a custom percent field with the following default value:
+
+IF($User.City = "Napa", 0.0750,
+  IF($User.City = "Paso Robles", 0.0725,
+    IF($User.City = "Sutter Creek", 0.0725,
+      IF($User.City = "Los Olivos", 0.0750,
+        IF($User.City = "Livermore", 0.0875, null
+        )
+      )
+    )
+  )
+)
