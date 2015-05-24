@@ -1,0 +1,25 @@
+// This example uses the IF function to determine if an address is in the United States or 
+// United Kingdom so that it can use the appropriate type of Google map to display the address.
+
+{!
+IF(Sample.BillingCountry = "US",
+"http://maps.google.com/maps?q="&Sample.BillingStreet&
+"+"&Sample.BillingCity&"+"&Sample.BillingState&"+
+"&Sample.BillingCountry,
+(IF(Sample.BillingCountry = "UK",
+"http:maps.google.co.uk/maps?q="&Sample.BillingStreet
+&"+"&Sample.BillingCity&"+"&Sample.BillingCountry,
+"http://maps.google.com)))
+}
+
+
+Make sure your value_if_true and value_if_false expressions are the same data type.
+When using an IF function with the $Profile.UserType variable to determine the type of Salesforce user license the logged in user has, use the following values:
+Standard for Salesforce
+PowerPartner for PRM User
+CustomerSuccess for Customer Portal User
+PowerCustomerSuccess for Customer Portal Manager
+For example, use the following formulas to determine if the logged in user has the license type in quotes:
+IF(ISPICKVAL($Profile.UserType ,"Standard"), 100, 0.1)
+IF(ISPICKVAL($Profile.UserType ,"PowerPartner"), 100, 0.1)
+IF(ISPICKVAL($Profile.UserType ,"CustomerSuccess"), 100, 0.1)
