@@ -1,0 +1,22 @@
+INCLUDES(multi_select_field, text_literal)
+
+INCLUDES(Hobbies__c, "Golf")
+
+INCLUDES(
+  PRIORVALUE(multiselect_picklist_field), text_literal)
+
+INCLUDES(multiselect_picklist_field, text_literal) and replace multiselect_picklist_field 
+with the merge field name for the multi-select picklist; and replace text_literal with the 
+multi-select picklist value you want to match in quotes.
+
+The text_literal expression must be of type text and enclosed in quotes. 
+It cannot be a merge field or the result of a function.
+Salesforce returns an error if any of the following occurs:
+You do not provide a text_literal expression.
+You provide an empty text_literal expression, such as "" or " ".
+Use ISBLANK to determine if a multi-select picklist field is empty.
+Use the PRIORVALUE function inside the INCLUDES function to check if the previous 
+value of a multi-select picklist field included a specific value. For example:
+
+INCLUDES(
+  PRIORVALUE(multiselect_picklist_field), text_literal)
