@@ -1,0 +1,70 @@
+IF (ISBLANK(Close_Date__c),
+    TODAY() - Open_Date__c ,
+    Close_Date__c - Open_Date__c)
+
+IF(logical_test,
+    value_if_true,
+    value_if_false)
+
+Hire By [Today() + 90]
+
+Close date is not specified: ISBLANK(Close_Date__c)
+
+ISPICKVAL(Status__c, "Closed - Filled")
+
+to check the value of the picklist:
+  TEXT(Status__c) = "Closed - Filled"
+
+
+Close Date must be specified when Status is set to 'Closed - Filled'
+or 'Closed - Not Approved.'
+
+    ISBLANK(Close_Date__c) &&
+      (ISPICKVAL(Status__c, "Closed - Filled") ||
+       ISPICKVAL(Status__c, "Closed - Not Approved"))
+
+
+If Account Status = Current Customer
+required: Close Date, Renewal Date, Number of Licenses
+
+    ISBLANK(Close_Date__c) &&
+      (ISPICKVAL(Account_Status__c, "Current Customer"))
+
+    ISBLANK(Renewal_Date__c) &&
+      (ISPICKVAL(Account_Status__c, "Current Customer"))
+
+    ISBLANK(Number_of_Licenses__c) &&
+      (ISPICKVAL(Account_Status__c, "Current Customer"))
+
+Close Date must be specified when Account Status is set to 'Current Customer.'
+
+Renewal Date must be specified when Account Status is set to 'Current Customer.'
+
+Number of Licenses must be specified when Account Status is set to 'Current Customer.'
+
+
+If Unqualified Reasons = Other
+    required: Unqualified Reasons - Other
+
+    ISBLANK()
+
+IF(ISPICKVAL())
+
+HYPERLINK
+  (Job_Application__r.Candidate__r.Id,
+  &
+  " "
+  &
+  Job_Application__r.Candidate__r.Last_Name__c)
+
+(Rating__c <1 || Rating__c >5)
+
+Title: {!Position__c.Name}
+Functional Area: {!Position__c.Functional_Area__c}
+Location: {!Position__c.Location__c}
+
+Job Description
+{!Position__c.Job_Description__c}
+
+Responsibilities
+{!Position__c.Responsibilities__c}
