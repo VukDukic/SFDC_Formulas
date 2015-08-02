@@ -1,0 +1,5 @@
+IF(ISPICKVAL(StageName, "Pending"), "Pending",
+  IF(ISPICKVAL(StageName, "Active"), "Pending",
+    IF(ISPICKVAL(StageName, "Goal Shared"), "Accepted",
+      IF(ISPICKVAL(StageName, "Champion"), ....
+
