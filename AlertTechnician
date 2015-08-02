@@ -4,3 +4,7 @@ IF(ISNULL(Technician__r.Email), False, True)
 Rule name: Alert Technician
 - formule evaluates to True
 - Technician__r.Email
+
+Automate maintenance ticket
+Assign task
+Automatically generate email
