@@ -1,0 +1,3 @@
+IF(ISPICKVAL(Ticket_Type__c, "VIP"),
+  100 * Tickets_Purchased__c,
+  50 * Tickets_Puchased__c)
