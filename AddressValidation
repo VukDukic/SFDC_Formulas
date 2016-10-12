@@ -1,0 +1,6 @@
+VLOOKUP(
+  $ObjectType.Zip_Code__c.Fields.City__c ,
+  Formula:
+  $ObjectType.Zip_Code__c.Fields.Name ,
+  LEFT(BillingPostalCode,5)
+) <> BillingCity
