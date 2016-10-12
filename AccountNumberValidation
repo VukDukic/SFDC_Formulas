@@ -1,0 +1,4 @@
+AND(
+ LEN ( AccountNumber) > 0,
+ NOT (ISNUMBER( AccountNumber )
+)	
