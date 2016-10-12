@@ -1,0 +1,5 @@
+AND(
+    Accepted_Flag__c,
+    OR ( ISPICKVAL( StageName, "Stage 1" ),
+ISPICKVAL( StageName, "Stage 2"))
+)
