@@ -1,0 +1,4 @@
+AND(
+ MailingState = "CA",
+ NOT(REGEX(Drivers_License__c, "([A-Z]\\d{7})?"))
+)
